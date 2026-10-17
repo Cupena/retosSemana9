@@ -108,6 +108,7 @@ while True:
         op = int(input("Ingrese su opcion a realizar: "))
     except ValueError:
         print(error_generico())
+        continue
 
     if op == 1:
         print(agregar_cliente(pendientes))
@@ -155,7 +156,7 @@ while True:
     elif op == 15:
 
         break
-    
+
     else:
         print(error_generico())
 
