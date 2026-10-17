@@ -5,8 +5,8 @@ pendientes = []
 #La pila
 atendidos = []
 
-def evaluar_cero(pendientes):
-    return len(pendientes) == 0
+def evaluar_cero(lista):
+    return len(lista) == 0
 
 def agregar_cliente(pendientes):
     cliente = input("Ingrese nombre del cliente: ")
@@ -71,6 +71,12 @@ def mostrar_UltPend(pendientes):
 
 def mostrar_siguiente_pendiente(pendientes):
     return f"El siguiente en la lista es: {pendientes[0]}"
+
+def contar_atendidos(atendidos):
+    return f"Se han atendido: {len(atendidos)} el dia de hoy."
+
+def contar_pendientes(pendientes):
+    return f"Tiene una cantidad de: {len(pendientes)} en espera."
 
 def menu():
     return """===MENU===
