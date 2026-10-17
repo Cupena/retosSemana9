@@ -57,7 +57,10 @@ def mostrar_atendidos(atendidos):
         return atendidos
 
 def mostrar_UltAtend(atendidos):
-    return f"El último cliente atendido fue: {atendidos[-1]}"
+    if evaluar_cero(atendidos):
+        return "No hay clientes atendidos."
+    else:
+        return f"El último cliente atendido fue: {atendidos[-1]}"
 
 def mostrar_siguiente_pendiente(pendientes):
     return f"El siguiente en la lista es: {pendientes[0]}"
@@ -105,12 +108,10 @@ while True:
     elif op == 9:
         print(mostrar_atendidos(atendidos))
     elif op == 10:
-        print(mostrar_pendientes(pendientes))
-        print(mostrar_atendidos(atendidos))
+        print("Pendientes: ", mostrar_pendientes(pendientes))
+        print("Atendidos: ", mostrar_atendidos(atendidos))
     elif op == 11:
         break
     else:
         print(error_generico())
-
-#Creacion nueva rama
 
