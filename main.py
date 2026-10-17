@@ -41,8 +41,8 @@ def revertir_atendido(pendientes, atendidos):
     return f"Se ha revertido el cliente atendido: {cliente_regresado}, y regresado como pendiente en su posicion 0."
 
 def mover_alUltimo(pendientes):
-    cliente = pendientes[0]
-    pendientes.append[-1](cliente)
+    cliente = pendientes.pop(0)
+    pendientes.append(cliente)
     return f"Se ha movido a {cliente} a la ultima posicion."
 
 def menu():
