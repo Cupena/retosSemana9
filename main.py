@@ -62,6 +62,13 @@ def mostrar_UltAtend(atendidos):
     else:
         return f"El último cliente atendido fue: {atendidos[-1]}"
 
+def mostrar_UltPend(pendientes):
+    if evaluar_cero(pendientes):
+        return "No hay clientes pendientes."
+    else:
+        return f"El ultimo cliente pendiente es: {pendientes[-1]}"
+    
+
 def mostrar_siguiente_pendiente(pendientes):
     return f"El siguiente en la lista es: {pendientes[0]}"
 
@@ -73,11 +80,14 @@ def menu():
     4. Revertir atendido registrado
     5. Mover primero a ultimo
     6. Muestra ultimo atendido
-    7. Muestra siguiente en la lista
-    8. Muestra lista pendientes
-    9. Muestra lista atendidos
-    10. Muestra lista total
-    11. Salir"""
+    7. Mostrar ultimo pendiente
+    8. Mostrar cuantos atendidos hoy
+    9. Mostrar cuantos pendientes por hoy
+    10. Muestra siguiente en la lista
+    11. Muestra lista pendientes
+    12. Muestra lista atendidos
+    13. Muestra lista total
+    14. Salir"""
 
 def error_generico():
     return "Ingrese un numero valido"
@@ -102,15 +112,21 @@ while True:
     elif op == 6:
         print(mostrar_UltAtend(atendidos))
     elif op == 7:
-        print(mostrar_siguiente_pendiente(pendientes))
+        print(mostrar_UltPend(pendientes))
     elif op == 8:
-        print(mostrar_pendientes(pendientes))
+        pass
     elif op == 9:
-        print(mostrar_atendidos(atendidos))
+        pass
     elif op == 10:
+        print(mostrar_siguiente_pendiente(pendientes))
+    elif op == 11:
+        print(mostrar_pendientes(pendientes))
+    elif op == 12:
+        print(mostrar_atendidos(atendidos))
+    elif op == 13:
         print("Pendientes: ", mostrar_pendientes(pendientes))
         print("Atendidos: ", mostrar_atendidos(atendidos))
-    elif op == 11:
+    elif op == 14:
         break
     else:
         print(error_generico())
