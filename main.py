@@ -78,6 +78,9 @@ def contar_atendidos(atendidos):
 def contar_pendientes(pendientes):
     return f"Tiene una cantidad de: {len(pendientes)} en espera."
 
+def contar_totales(pendientes, atendidos):
+    return f"El dia de hoy llegaron {len(pendientes) + len(atendidos)} al consultorio."
+
 def menu():
     return """===MENU===
     1. Agregar cliente
@@ -87,12 +90,13 @@ def menu():
     5. Mover primero a ultimo
     6. Muestra ultimo atendido
     7. Mostrar ultimo pendiente
-    8. Mostrar cuantos atendidos hoy
-    9. Mostrar cuantos pendientes por hoy
+    8. Contar atendidos hoy
+    9. Contar pendientes por hoy
     10. Muestra siguiente en la lista
     11. Muestra lista pendientes
     12. Muestra lista atendidos
     13. Muestra lista total
+    14. Contar lista total
     14. Salir"""
 
 def error_generico():
@@ -107,33 +111,51 @@ while True:
 
     if op == 1:
         print(agregar_cliente(pendientes))
+
     elif op == 2:
         print(agregar_atendidos(atendidos, pendientes))
+
     elif op == 3:
         print(revertir_cliente(pendientes))
+
     elif op == 4:
         print(revertir_atendido(pendientes, atendidos))
+
     elif op == 5:
         print(mover_alUltimo(pendientes))
+
     elif op == 6:
         print(mostrar_UltAtend(atendidos))
+
     elif op == 7:
         print(mostrar_UltPend(pendientes))
+
     elif op == 8:
         print(contar_atendidos(atendidos))
+
     elif op == 9:
         print(contar_pendientes(pendientes))
+
     elif op == 10:
         print(mostrar_siguiente_pendiente(pendientes))
+
     elif op == 11:
         print(mostrar_pendientes(pendientes))
+
     elif op == 12:
         print(mostrar_atendidos(atendidos))
+
     elif op == 13:
         print("Pendientes: ", mostrar_pendientes(pendientes))
         print("Atendidos: ", mostrar_atendidos(atendidos))
+
     elif op == 14:
+        print(contar_totales(pendientes, atendidos))
+
+    elif op == 15:
+
         break
+    
     else:
         print(error_generico())
 
