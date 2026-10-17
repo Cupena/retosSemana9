@@ -120,9 +120,9 @@ while True:
     elif op == 7:
         print(mostrar_UltPend(pendientes))
     elif op == 8:
-        pass
+        print(contar_atendidos(atendidos))
     elif op == 9:
-        pass
+        print(contar_pendientes(pendientes))
     elif op == 10:
         print(mostrar_siguiente_pendiente(pendientes))
     elif op == 11:
