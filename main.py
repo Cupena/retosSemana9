@@ -59,6 +59,9 @@ def mostrar_atendidos(atendidos):
 def mostrar_UltAtend(atendidos):
     return f"El último cliente atendido fue: {atendidos[-1]}"
 
+def mostrar_siguiente_pendiente(pendientes):
+    return f"El siguiente en la lista es: {pendientes[0]}"
+
 def menu():
     return """===MENU===
     1. Agregar cliente
@@ -96,7 +99,7 @@ while True:
     elif op == 6:
         print(mostrar_UltAtend(atendidos))
     elif op == 7:
-        pass
+        print(mostrar_siguiente_pendiente(pendientes))
     elif op == 8:
         print(mostrar_pendientes(pendientes))
     elif op == 9:
