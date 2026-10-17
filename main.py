@@ -1,6 +1,5 @@
 from flask import Flask
-import clientes, listos, listas,traslado
-
+import clientes, listos, listas, catalogo
 app = Flask(__name__)
 
 @app.route("/")
@@ -11,7 +10,7 @@ pendientes = []
 atendidos = []
 
 while True:
-    print(menu())
+    print(catalogo.menu())
     try:
         op = int(input("Ingrese su opcion a realizar: "))
     except ValueError:
