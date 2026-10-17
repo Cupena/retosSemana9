@@ -17,4 +17,4 @@ def menu():
     12. Muestra lista atendidos
     13. Muestra lista total
     14. Contar lista total
-    14. Salir"""
+    15. Salir"""
