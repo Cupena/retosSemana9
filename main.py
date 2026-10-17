@@ -21,7 +21,6 @@ def agregar_atendidos(atendidos,pendientes):
         atendidos.append(atendido)
         return f"Ha atendido a:, {atendido}"
 
-#En caso de error, querer eliminar cliente sin afectar el proceso:
 def revertir_cliente(pendientes):
     if evaluar_cero(pendientes):
         return "No hay clientes por revertir."
@@ -44,6 +43,18 @@ def mover_alUltimo(pendientes):
     cliente = pendientes.pop(0)
     pendientes.append(cliente)
     return f"Se ha movido a {cliente} a la ultima posicion."
+
+def mostrar_pendientes(pendientes):
+    if evaluar_cero(pendientes):
+        return "No hay pendientes."
+    else:
+        return pendientes
+
+def mostrar_atendidos(atendidos):
+    if evaluar_cero(atendidos):
+        return "No hay lista de atendidos"
+    else:
+        return atendidos
 
 def menu():
     return """===MENU===
@@ -84,10 +95,10 @@ while True:
     elif op == 7:
         pass
     elif op == 8:
-        pass
+        print(mostrar_pendientes(pendientes))
     elif op == 9:
-        pass
-    elif op == 0:
+        print(mostrar_atendidos(atendidos))
+    elif op == 11:
         break
     else:
         print(error_generico())
