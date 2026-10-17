@@ -1,11 +1,14 @@
 from flask import Flask
-import clientes, listos, listas
+import clientes, listos, listas,traslado
 
 app = Flask(__name__)
 
 @app.route("/")
 def inicio():
     return "===___BIENVENIDO___==="
+
+pendientes = []
+atendidos = []
 
 while True:
     print(menu())
