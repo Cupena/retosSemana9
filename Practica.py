@@ -33,16 +33,16 @@ def registrar_asunto():
     return "Problema agregado."
 
 
-def registrar_solicitud():
-    print(registrar_nombre())
+def registrar_solicitud(nombre, distrito, asunto):
+    solicitud = {
+        "Nombre" : nombre,
+        "Sector" : distrito,
+        "Problema": asunto
+        }
+    
+    
 
     
 
             
-    solicitud = {
-    "Nombre" : nombre,
-    "Sector" : distrito
-
-
-    }
-
+    
