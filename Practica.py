@@ -15,7 +15,6 @@ def registrar_distrito():
             except ValueError:
                 print(errores.error_generico())
     while True:
-            print(registrar_asunto())
 
             while True:
                 try:
