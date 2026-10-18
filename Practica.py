@@ -3,13 +3,16 @@
 import errores
 solicitudes = []
 
-def registrar_asunto(asunto):
+def registrar_nombre():
+    nombre_cliente = input("Ingrese su nombre: ").strip()
+    return f"Su nombre {nombre_cliente} se ha registrado exitosamente."
+
+def registrar_asunto():
     asunto = input("Ingrese su problema: \n- ")
     return "Problema agregado."
 
 def registrar_solicitud():
-    nombre = input("Ingrese su nombre: ").strip()
-    
+    print(registrar_nombre())
     while True:
         try:
             distrito = int(input("Ingrese su sector: "))
