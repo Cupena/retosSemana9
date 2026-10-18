@@ -15,19 +15,18 @@ def registrar_distrito():
             except ValueError:
                 print(errores.error_generico())
     while True:
+        try:
+            op = int(input("Desea seguir agregando asuntos? (1. Si / 2. No)"))
+            break
+        except ValueError:
+            print(errores.error_generico())
 
-            while True:
-                try:
-                    op = int(input("Desea seguir agregando asuntos? (1. Si / 2. No)"))
-                except ValueError:
-                    print(errores.error_generico())
-
-                if op ==1:
-                    registrar_asunto()
-                elif op ==2:
-                    break
-                else:
-                    print(errores.error_generico())
+            if op ==1:
+                registrar_asunto()
+            elif op ==2:
+                break
+            else:
+                print(errores.error_generico())
     
 def registrar_asunto():
     asunto = input("Ingrese su problema: \n- ")
