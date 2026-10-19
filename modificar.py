@@ -10,6 +10,11 @@ def revertir_ultimo_diccionario(solicitudes):
         solicitudes.pop()
     return "Ultimo diccionario revertido exitosamente."
 
+def mostrar_siguiente_diccionario(solicitudes):
+    if evaluar_cero(solicitudes):
+        return "No hay diccionario registrado."
+    else:
+        return solicitudes[-1]
 
 
 
