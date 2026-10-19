@@ -15,6 +15,7 @@ def selector_opcion():
             print(errores.error_generico())
 
         if op == 1:
+            id = registro.registrar_id()
             nombre = registro.registrar_nombre()
             distrito = registro.registrar_distrito()
             asunto = registro.registrar_asunto()

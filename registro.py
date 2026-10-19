@@ -1,7 +1,7 @@
 #Modulo de Registro
 import errores
 
-def id_problema(ultimo_id):
+def registrar_id(ultimo_id):
     ultimo_id += 1
     return ultimo_id
 
