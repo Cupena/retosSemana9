@@ -28,9 +28,9 @@ def selector_opcion():
         if op ==3:
             print(modificar.mostrar_siguiente_diccionario(solicitudes))
 
-        if op ==2:
-            pass
-        
+        if op ==4:
+            print(modificar.buscador_solicitudes(solicitudes))
+
         if op ==2:
             pass
         if op ==2:

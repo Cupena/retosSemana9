@@ -6,4 +6,5 @@ def menu():
     1. Agregar solicitudes
     2. Revertir solicitud
     3. Mostrar siguiente solicitud
+    4. Buscar solicitud
     0. Salir del programa"""
