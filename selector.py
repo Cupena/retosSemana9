@@ -3,6 +3,7 @@
 import errores, catalogo,registro,modificar
 
 solicitudes = []
+solicitudes_atendidas = []
 id_solicitud = 0000
 
 def selector_opcion():
