@@ -1,6 +1,9 @@
 #Modulo de Registro
-
 import errores
+
+def id_problema(ultimo_id):
+    ultimo_id += 1
+    return ultimo_id
 
 def registrar_nombre():
     while True:
@@ -28,8 +31,9 @@ def registrar_asunto():
             print("Ingrese un problema valido.")
 
 
-def registrar_solicitud(nombre, distrito, asunto,solicitudes):
+def registrar_solicitud(id_problema,nombre, distrito, asunto,solicitudes):
     solicitud = {
+        "ID" : id_problema,
         "Nombre" : nombre,
         "Sector" : distrito,
         "Problema": asunto

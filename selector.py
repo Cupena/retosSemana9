@@ -3,6 +3,7 @@
 import errores, catalogo,registro
 
 solicitudes = []
+id = 0000
 
 def selector_opcion():
     
