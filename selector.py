@@ -3,7 +3,7 @@
 import errores, catalogo,registro
 
 solicitudes = []
-id = 0000
+id_solicitud = 0000
 
 def selector_opcion():
     
@@ -15,7 +15,7 @@ def selector_opcion():
             print(errores.error_generico())
 
         if op == 1:
-            id = registro.registrar_id()
+            id = registro.registrar_id(id_solicitud)
             nombre = registro.registrar_nombre()
             distrito = registro.registrar_distrito()
             asunto = registro.registrar_asunto()
