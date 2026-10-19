@@ -24,21 +24,22 @@ def registrar_distrito():
     
 def registrar_asunto():
     while True:
-        asunto = input("Ingrese su problema: \n- ").strip
+        asunto = input("Ingrese su problema: \n- ").strip()
         if asunto:
             return asunto
         else:
             print("Ingrese un problema valido.")
 
 
-def registrar_solicitud(id_problema,nombre, distrito, asunto,estado, solicitudes):
+def registrar_solicitud(id_problema,nombre, distrito, asunto, solicitudes):
     solicitud = {
         "ID" : id_problema,
         "Nombre" : nombre,
         "Sector" : distrito,
         "Problema": asunto,
-        "Estado" : estado
+        "Estado" : "Pendiente"
         }
-    return solicitudes.append(solicitud)
+    solicitudes.append(solicitud)
+    return f"Se ha registrado la solicitud {id_problema} usuario {nombre}"
     
     

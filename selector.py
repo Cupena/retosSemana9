@@ -19,8 +19,7 @@ def selector_opcion():
             nombre = registro.registrar_nombre()
             distrito = registro.registrar_distrito()
             asunto = registro.registrar_asunto()
-            estado = "Pendiente"
-            registro.registrar_solicitud(id, nombre, distrito, asunto, estado, solicitudes)
+            registro.registrar_solicitud(id, nombre, distrito, asunto, solicitudes)
         if op ==2:
             print(modificar.revertir_ultimo_diccionario(solicitudes))
         if op ==3:
