@@ -53,7 +53,15 @@ def mostrar_solicitud(solicitudes):
     if evaluar_cero(solicitudes):
         return "No hay solicitudes registradas"
     else:
-        return solicitudes            
+        return solicitudes
+
+def eliminar_especifico(solicitudes):
+    id_especifico = pedir_solicitud_id(solicitudes)            
+
+    for solicitud in solicitudes:
+        if solicitud["ID"] == id_especifico["ID"]:
+            id_especifico.pop()
+    return f"Se ha eliminado la solicitud {id_especifico}"
         
 
 
