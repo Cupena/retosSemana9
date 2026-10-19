@@ -59,9 +59,11 @@ def eliminar_especifico(solicitudes):
     id_especifico = pedir_solicitud_id(solicitudes)            
 
     for solicitud in solicitudes:
-        if solicitud["ID"] == id_especifico["ID"]:
-            id_especifico.pop()
-    return f"Se ha eliminado la solicitud {id_especifico}"
+        if solicitud["ID"] == id_especifico:
+            solicitudes.remove(solicitud)
+            return f"Se ha eliminado la solicitud {id_especifico}"
+
+    return "No se ha encontrado el ID"
         
 
 
