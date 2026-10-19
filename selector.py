@@ -40,10 +40,10 @@ def selector_opcion():
         if op ==7:
             print(modificar.mostrar_solicitud(solicitudes_atendidas))
             
-        if op ==2:
-            pass
-        if op ==2:
-            pass
+        if op ==8:
+            print(modificar.eliminar_especifico(solicitudes))
+        if op ==9:
+            print(modificar.eliminar_especifico(solicitudes_atendidas))
         if op ==2:
             pass
         if op ==2:

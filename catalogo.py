@@ -10,4 +10,6 @@ def menu():
     5. Marcar siguiente como atendido
     6. Mostrar solicitudes pendientes
     7. Mostrar solicitudes atendidas
+    8. Eliminar solicitud pendiente especifica
+    9. Eliminar solicitud atendida especifica
     0. Salir del programa"""
