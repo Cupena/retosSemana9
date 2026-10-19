@@ -21,12 +21,16 @@ def selector_opcion():
             distrito = registro.registrar_distrito()
             asunto = registro.registrar_asunto()
             registro.registrar_solicitud(id, nombre, distrito, asunto, solicitudes)
+
         if op ==2:
             print(modificar.revertir_ultimo_diccionario(solicitudes))
+
         if op ==3:
             print(modificar.mostrar_siguiente_diccionario(solicitudes))
+
         if op ==2:
             pass
+        
         if op ==2:
             pass
         if op ==2:

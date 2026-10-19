@@ -1,5 +1,7 @@
 #Modificar la lista
 
+import errores
+
 def evaluar_cero(solicitudes):
     return len(solicitudes) == 0
 
@@ -15,6 +17,28 @@ def mostrar_siguiente_diccionario(solicitudes):
         return "No hay diccionario registrado."
     else:
         return solicitudes[-1]
+
+def pedir_solicitud():
+    while True:
+        try:
+            id_solicitado = int(input("Digite el id a seleccionar: "))
+            return id_solicitado
+        except ValueError:
+            print(errores.error_generico())
+
+
+def buscador_solicitudes(solicitudes):
+    id_buscado = pedir_solicitud()
+
+    for solicitud in solicitudes:
+        if solicitud["ID"] == id_buscado:
+            return solicitud
+        else:
+            return "No se ha registrado ese ID."
+
+
+
+
 
 
 
