@@ -19,7 +19,7 @@ def selector_opcion():
             nombre = registro.registrar_nombre()
             distrito = registro.registrar_distrito()
             asunto = registro.registrar_asunto()
-            registro.registrar_solicitud(nombre, distrito, asunto, solicitudes)
+            registro.registrar_solicitud(id, nombre, distrito, asunto, solicitudes)
         if op ==2:
             pass
         if op ==2:
@@ -43,6 +43,7 @@ def selector_opcion():
         if op ==2:
             pass
         if op ==3:
+            print("Se ha cerrado el programa exitosamente.")
             break
         else:
             print(errores.error_opcion())
