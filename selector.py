@@ -12,10 +12,15 @@ def selector_opcion():
             op = int(input("\nIngrese la opcion a tomar: "))
         except ValueError:
             print(errores.error_generico())
-            
+
         if op == 1:
             nombre = registro.registrar_nombre()
             distrito = registro.registrar_distrito()
             asunto = registro.registrar_asunto()
             registro.registrar_solicitud(nombre, distrito, asunto, solicitudes)
+        if op ==3:
+            break
+        else:
+            print(errores.error_opcion())
+
 
