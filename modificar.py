@@ -48,7 +48,12 @@ def marcar_siguiente_atendido(pendientes, atendidas):
             if solicitud["ID"] == atendido["ID"]:
                 solicitud["Estado"] = "Atendido"
                 return "Solicitud atendida satisfactoriamente."
-            
+
+def mostrar_solicitud(solicitudes):
+    if evaluar_cero(solicitudes):
+        return "No hay solicitudes registradas"
+    else:
+        return solicitudes            
         
 
 

@@ -33,10 +33,13 @@ def selector_opcion():
 
         if op ==5:
             print(modificar.marcar_siguiente_atendido(solicitudes, solicitudes_atendidas))
-        if op ==2:
-            pass
-        if op ==2:
-            pass
+        
+        if op ==6:
+            print(modificar.mostrar_solicitud(solicitudes))
+            
+        if op ==7:
+            print(modificar.mostrar_solicitud(solicitudes_atendidas))
+            
         if op ==2:
             pass
         if op ==2:
