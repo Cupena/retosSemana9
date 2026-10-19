@@ -2,6 +2,8 @@
 
 import errores, catalogo,registro
 
+solicitudes = []
+
 def selector_opcion():
     
     while True:
@@ -10,7 +12,10 @@ def selector_opcion():
             op = int(input("\nIngrese la opcion a tomar: "))
         except ValueError:
             print(errores.error_generico())
+            
         if op == 1:
-            print(registro.registrar_nombre())
-            print(registro.registrar_distrito())
-            print(registro.registrar_asunto())
+            nombre = registro.registrar_nombre()
+            distrito = registro.registrar_distrito()
+            asunto = registro.registrar_asunto()
+            registro.registrar_solicitud(nombre, distrito, asunto, solicitudes)
+

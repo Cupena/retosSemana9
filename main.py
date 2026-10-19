@@ -3,9 +3,8 @@
 #Practica de diccionario
 
 import errores, registro, catalogo, selector, flask
-solicitudes = []
 
-
+print(selector.selector_opcion())
 
 
 
