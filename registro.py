@@ -3,21 +3,29 @@
 import errores
 
 def registrar_nombre():
-    nombre_cliente = input("Ingrese su nombre: ").strip()
-    return f"Su nombre {nombre_cliente} se ha registrado exitosamente."
+    while True:
+        nombre_cliente = input("Ingrese su nombre: ").strip()
+        if nombre_cliente:
+            return nombre_cliente
+        else:
+            print("Ingresa un nombre valido.") 
 
 def registrar_distrito():
     while True:
             try:
                 distrito = int(input("Ingrese su sector: "))
-                break
+                return distrito
             except ValueError:
                 print(errores.error_generico())
 
     
 def registrar_asunto():
-    asunto = input("Ingrese su problema: \n- ")
-    return "Problema agregado."
+    while True:
+        asunto = input("Ingrese su problema: \n- ").strip
+        if asunto:
+            return asunto
+        else:
+            print("Ingrese un problema valido.")
 
 
 def registrar_solicitud(nombre, distrito, asunto,solicitudes):
@@ -26,5 +34,6 @@ def registrar_solicitud(nombre, distrito, asunto,solicitudes):
         "Sector" : distrito,
         "Problema": asunto
         }
-    solicitudes.append(solicitud)
+    return solicitudes.append(solicitud)
+    
     
