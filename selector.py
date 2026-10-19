@@ -1,6 +1,6 @@
 #Modulo para elegir que hacer
 
-import errores, catalogo,registro
+import errores, catalogo,registro,modificar
 
 solicitudes = []
 id_solicitud = 0000
@@ -19,30 +19,31 @@ def selector_opcion():
             nombre = registro.registrar_nombre()
             distrito = registro.registrar_distrito()
             asunto = registro.registrar_asunto()
-            registro.registrar_solicitud(id, nombre, distrito, asunto, solicitudes)
+            estado = "Pendiente"
+            registro.registrar_solicitud(id, nombre, distrito, asunto, estado, solicitudes)
         if op ==2:
-            pass
-        if op ==2:
-            pass
-        if op ==2:
-            pass
-        if op ==2:
-            pass
-        if op ==2:
-            pass
-        if op ==2:
-            pass
-        if op ==2:
-            pass
-        if op ==2:
-            pass
-        if op ==2:
-            pass
-        if op ==2:
-            pass
-        if op ==2:
-            pass
+            print(modificar.revertir_ultimo_diccionario(solicitudes))
         if op ==3:
+            print(modificar.mostrar_siguiente_diccionario(solicitudes))
+        if op ==2:
+            pass
+        if op ==2:
+            pass
+        if op ==2:
+            pass
+        if op ==2:
+            pass
+        if op ==2:
+            pass
+        if op ==2:
+            pass
+        if op ==2:
+            pass
+        if op ==2:
+            pass
+        if op ==2:
+            pass
+        if op ==0:
             print("Se ha cerrado el programa exitosamente.")
             break
         else:

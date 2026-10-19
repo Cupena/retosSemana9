@@ -31,12 +31,13 @@ def registrar_asunto():
             print("Ingrese un problema valido.")
 
 
-def registrar_solicitud(id_problema,nombre, distrito, asunto,solicitudes):
+def registrar_solicitud(id_problema,nombre, distrito, asunto,estado, solicitudes):
     solicitud = {
         "ID" : id_problema,
         "Nombre" : nombre,
         "Sector" : distrito,
-        "Problema": asunto
+        "Problema": asunto,
+        "Estado" : estado
         }
     return solicitudes.append(solicitud)
     
