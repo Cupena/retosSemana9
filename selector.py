@@ -18,6 +18,28 @@ def selector_opcion():
             distrito = registro.registrar_distrito()
             asunto = registro.registrar_asunto()
             registro.registrar_solicitud(nombre, distrito, asunto, solicitudes)
+        if op ==2:
+            pass
+        if op ==2:
+            pass
+        if op ==2:
+            pass
+        if op ==2:
+            pass
+        if op ==2:
+            pass
+        if op ==2:
+            pass
+        if op ==2:
+            pass
+        if op ==2:
+            pass
+        if op ==2:
+            pass
+        if op ==2:
+            pass
+        if op ==2:
+            pass
         if op ==3:
             break
         else:
