@@ -16,7 +16,7 @@ def mostrar_siguiente_diccionario(solicitudes):
     if evaluar_cero(solicitudes):
         return "No hay diccionario registrado."
     else:
-        return solicitudes[-1]
+        return solicitudes[0]
 
 def pedir_solicitud_id(solicitudes):
     if evaluar_cero(solicitudes):
@@ -36,8 +36,22 @@ def buscador_solicitudes(solicitudes):
     for solicitud in solicitudes:
         if solicitud["ID"] == id_buscado:
             return solicitud
-        else:
-            return "No se ha registrado ese ID."
+    return "No se ha registrado ese ID."    
+
+def marcar_siguiente_atendido(pendientes, atendidas):
+    if evaluar_cero(pendientes):
+        return "No hay Solicitudes Pendientes por Atender."
+    else:
+        atendido = pendientes.pop(0)
+        atendidas.append(atendido)
+        for solicitud in atendidas:
+            if solicitud["ID"] == atendido["ID"]:
+                solicitud["Estado"] = "Atendido"
+                return "Solicitud atendida satisfactoriamente."
+            
+        
+
+
 
 
 
